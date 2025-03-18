@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Vehicles by UnderWriter Id</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="view_underwriters.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- View Vehicle Form -->
+    <div id="viewVehicleForm" class="form-container">
+      <h2>View Vehicle Details by UnderWriter Id</h2>
+      <form id="viewVehicleForm">
+        <label for="underwriterId">Enter UnderWriter Id:</label>
+        <input type="number" id="underwriterId" required>
+        <button type="button" onclick="fetchVehiclesByUnderWriterId()">Fetch Vehicles</button>
+      </form>
+
+      <div id="vehicleDetails" class="policy-details" style="display: none;">
+        <h3>Vehicle Details:</h3>
+        <ul id="vehicleList"></ul>
+        <p id="totalVehicles"></p>
+      </div>
+
+      <div id="error-message" class="error-message" style="display: none;">
+        <p id="errorText"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="view_underwriters.js"></script>
+</body>
+</html>

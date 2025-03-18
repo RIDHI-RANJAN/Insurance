@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Protect Vehicle - Role Selection</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <!-- Replace with your own logo image -->
+      <img src="https://via.placeholder.com/150" alt="Star Protect Vehicle Logo">
+    </div>
+
+
+    <h1>Welcome </h1>
+    <h1>To</h1>
+    <h1>STAR PROTECT VEHICLE</h1>
+    <p class="description">Choose your role to get started with our vehicle protection system.</p>
+
+    <div class="role-selection">
+      <button id="admin-btn" class="btn">Admin Login</button>
+      <button id="underwriter-btn" class="btn">Underwriter Login</button>
+    </div>
+
+    <div id="login-form" class="hidden">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" placeholder="Enter User ID" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button id="login-btn" class="btn">Login</button>
+        <p id="error-message" class="error hidden">Invalid credentials, please try again.</p>
+      </form>
+    </div>
+
+    <button id="back-btn" class="back-btn">Back to Homepage</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

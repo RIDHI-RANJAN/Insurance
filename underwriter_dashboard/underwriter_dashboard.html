@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Underwriter Dashboard - Vehicle Insurance</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="underwriter_dashboard.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Underwriter Dashboard</h2>
+      </div>
+      <ul>
+        <li><a href="#createInsurance" onclick="showDashboardOption('createInsurance')">Create Insurance</a></li>
+        <li><a href="#renewPolicy" onclick="showDashboardOption('renewPolicy')">Renew Policy</a></li>
+        <li><a href="#changePolicy" onclick="showDashboardOption('changePolicy')">Change Policy Type</a></li>
+        <li><a href="#viewPolicies" onclick="showDashboardOption('viewPolicies')">View Policies</a></li>
+        <li><a href="#logout" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Carousel Section for Images -->
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="pexels-mikebirdy-120049.jpg" alt="Car 1" class="car-image">
+          <img src="pexels-christian-9-454702-1164778.jpg" alt="Car 2" class="car-image">
+          <img src="pexels-mikebirdy-170811.jpg" alt="Car 3" class="car-image">
+          <img src="pexels-mikebirdy-116675.jpg" alt="Car 4" class="car-image">
+        </div>
+      </div>
+
+      <!-- Dashboard Stats -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h3>Create Insurance</h3>
+          <p>Create and manage all insurances</p>
+        </div>
+        <div class="stat-card">
+          <h3>Policies</h3>
+          <p>Register and manage Policies</p>
+        </div>
+        <div class="stat-card">
+          <h3>View Policies</h3>
+          <p>View detailed Policies</p>
+        </div>
+      </div>
+
+      <!-- Dashboard Options -->
+      <div id="dashboard-content">
+        <h2>Manage Vehicle Insurance</h2>
+
+        <!-- Button Section -->
+        <div class="dashboard-options">
+          <button class="dashboard-btn" onclick="createInsurance()">Create Insurance</button>
+          <button class="dashboard-btn" onclick="renewPolicy()">Renew Policy</button>
+          <button class="dashboard-btn" onclick="changePolicyType()">Change Policy Type</button>
+          <button class="dashboard-btn" onclick="viewPolicies()">View Policies</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="underwriter_dashboard.js"></script>
+</body>
+</html>

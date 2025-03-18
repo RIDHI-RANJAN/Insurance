@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Vehicle Insurance</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Dashboard</h2>
+      </div>
+      <ul>
+        <li><a href="#underwriterRegistration">Underwriter Registration</a></li>
+        <li><a href="#manageUnderwriters">Manage Underwriters</a></li>
+        <li><a href="#vehicleRegistration">Vehicle Registration</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Marquee Section for Car Images -->
+      <div class="marquee-container">
+        <marquee scrollamount="20" behavior="scroll" direction="left" class="car-marquee">
+          <img src="https://acko-cms.ackoassets.com/640x640_Saif_and_Sarah_Car_cb4ec7e07d.webp?fm=webp&w=1920&q=75" alt="Car 1" class="car-image">
+          <img src="3.png" alt="Car 2" class="car-image">
+          <img src="1.png" alt="Car 3" class="car-image">
+          <img src="4.png" alt="Car 4" class="car-image">
+          <img src="https://acko-cms.ackoassets.com/640x640_Saif_and_Sarah_Car_cb4ec7e07d.webp?fm=webp&w=1920&q=75" alt="Car 1" class="car-image">
+          <img src="3.png" alt="Car 2" class="car-image">
+          <img src="1.png" alt="Car 3" class="car-image">
+          <img src="4.png" alt="Car 4" class="car-image">
+          <!-- Add more car gifs as needed -->
+        </marquee>
+      </div>
+
+      <!-- Admin Dashboard Stats -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h3>Underwriters</h3>
+          <p>Manage and view all underwriters</p>
+        </div>
+        <div class="stat-card">
+          <h3>Vehicles</h3>
+          <p>Register and manage vehicle insurances</p>
+        </div>
+        <div class="stat-card">
+          <h3>Reports</h3>
+          <p>View detailed reports of all registrations</p>
+        </div>
+      </div>
+
+      <!-- Admin Actions -->
+      <div class="actions">
+        <h2>Admin Actions</h2>
+        <div class="action-buttons">
+          <a href="#underwriterRegistration" class="action-btn">Register Underwriter</a>
+          <a href="#manageUnderwriters" class="action-btn">Manage Underwriters</a>
+          <a href="#vehicleRegistration" class="action-btn">Register Vehicle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS for Carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

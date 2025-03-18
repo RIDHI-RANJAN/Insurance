@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy Dashboard - Underwriter</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="policy_dashboard.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Underwriter Dashboard</h2>
+      </div>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="showForm('updatePolicyForm')">Update Policy Type</a></li>
+        <li><a href="javascript:void(0)" onclick="showForm('renewPolicyForm')">Renew Policy</a></li>
+        <li><a href="javascript:void(0)" onclick="showForm('viewPolicyForm')">View Policy</a></li>
+        <li><a href="javascript:void(0)" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <!-- Update Policy Form -->
+      <div id="updatePolicyForm" class="form-container">
+        <h2>Update Policy Type</h2>
+        <form id="updateForm">
+          <label for="updatePolicyId">Enter Policy ID:</label>
+          <input type="number" id="updatePolicyId" required>
+          
+          <button type="button" onclick="fetchPolicyForUpdate()">Fetch Policy</button>
+        </form>
+        
+        <div id="updateDetails" class="policy-details" style="display: none;">
+          <h3>Current Policy Details:</h3>
+          <p id="updateExistingDetails"></p>
+          <div id="updateOptions" style="display: none;">
+            <p id="updateMessage"></p>
+            <button type="button" onclick="updatePolicyType()">Update Policy Type</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Renew Policy Form -->
+      <div id="renewPolicyForm" class="form-container" style="display: none;">
+        <h2>Renew Policy</h2>
+        <form id="renewForm">
+          <label for="renewPolicyId">Enter Policy ID:</label>
+          <input type="number" id="renewPolicyId" required>
+          
+          <button type="button" onclick="fetchPolicyForRenewal()">Fetch Policy</button>
+        </form>
+        
+        <div id="renewDetails" class="policy-details" style="display: none;">
+          <h3>Current Policy Details:</h3>
+          <p id="renewExistingDetails"></p>
+          <div id="renewOptions" style="display: none;">
+            <button type="button" onclick="renewPolicy()">Renew Policy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Policy Form -->
+      <div id="viewPolicyForm" class="form-container" style="display: none;">
+        <h2>View Policy Details</h2>
+        <form id="viewForm">
+          <label for="viewPolicyId">Enter Policy ID:</label>
+          <input type="number" id="viewPolicyId" required>
+          
+          <button type="button" onclick="fetchPolicyForView()">Fetch Policy</button>
+        </form>
+        
+        <div id="viewDetails" class="policy-details" style="display: none;">
+          <h3>Policy Details:</h3>
+          <p id="viewExistingDetails"></p>
+        </div>
+        <div id="viewError" class="error-message" style="display: none;">
+          <p>No such policy exists, please try again.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="policy_dashboard.js"></script>
+</body>
+</html>

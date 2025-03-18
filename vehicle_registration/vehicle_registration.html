@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Insurance Registration - Star Protect Vehicle</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="vehicle_registration.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vehicle Insurance Registration</h1>
+    <p class="description">Please enter the details below to register a vehicle insurance policy.</p>
+
+    <!-- Vehicle Registration Form -->
+    <div class="form-group">
+      <label for="vehicleNo">Vehicle No:</label>
+      <input type="text" id="vehicleNo" placeholder="Enter Vehicle No" required />
+    </div>
+
+    <div class="form-group">
+      <label for="vehicleType">Vehicle Type:</label>
+      <select id="vehicleType" required>
+        <option value="2-wheeler">2-wheeler</option>
+        <option value="4-wheeler">4-wheeler</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" placeholder="Enter Customer Name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="engineNo">Engine No:</label>
+      <input type="number" id="engineNo" placeholder="Enter Engine No" required />
+    </div>
+
+    <div class="form-group">
+      <label for="chasisNo">Chasis No:</label>
+      <input type="number" id="chasisNo" placeholder="Enter Chasis No" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNo">Phone No:</label>
+      <input type="tel" id="phoneNo" placeholder="Enter Phone No (10 digits)" pattern="[0-9]{10}" required />
+    </div>
+
+    <div class="form-group">
+      <label for="insuranceType">Insurance Type:</label>
+      <select id="insuranceType" required>
+        <option value="Full Insurance">Full Insurance</option>
+        <option value="ThirdParty">Third Party</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" required />
+    </div>
+
+    <div class="form-group">
+      <label for="premiumAmt">Premium Amount:</label>
+      <input type="number" id="premiumAmt" disabled />
+    </div>
+
+    <button id="registerVehicleBtn" class="menu-btn">Register Vehicle</button>
+
+    <div id="resultMessage" class="result-message"></div>
+
+    <button id="back-btn" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Vehicle Menu
+    </button>
+  </div>
+
+  <script src="vehicle_registration.js"></script>
+</body>
+</html>
