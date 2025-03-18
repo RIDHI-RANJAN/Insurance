@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Protect Vehicle - Underwriter Registration</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="underwriter_registration.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Star Protect Vehicle Logo">
+    </div>
+
+    <!-- Heading - Underwriter Registration -->
+    <h1>UNDERWRITER REGISTRATION</h1>
+    
+    <p class="description">Please fill in the details below to register the Underwriter.</p>
+
+    <form id="registration-form" class="registration-form">
+      <div class="form-row">
+        <label for="name">Underwriter Name:</label>
+        <input type="text" id="name" placeholder="Enter Full Name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter Email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <textarea id="address" placeholder="Enter Full Address" rows="4" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password (Alphanumeric):</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn">Register</button>
+
+      <p id="error-message" class="error hidden">Please enter valid data!</p>
+    </form>
+
+    <button id="back-btn" class="back-btn">Back to Role Selection</button>
+  </div>
+
+  <script src="underwriter_registration.js"></script>
+</body>
+</html>
